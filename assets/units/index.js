@@ -1,0 +1,13 @@
+export const em = 16
+export const padding = em * 5
+export const gutter = 30
+export const lineHeight = 1.5
+export const lineheightHeading = 1.5
+export const fontWeightLight = 400
+export const fontWeightRegular = 500
+export const fontWeightBold = 600
+export const fontWeightBlack = 800
+export const headerHeight = 105
+export const boxShadow = 'rgba(0,0,0,0.075) 0 0.2em 3em'
+export const borderRadius = 10
+export const borderRadiusSmall = 5
