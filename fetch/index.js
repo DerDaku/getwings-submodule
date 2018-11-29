@@ -6,6 +6,7 @@ import {
   setDataCurrentThemeMeditations,
   setDataThemes,
   setDataAllWings,
+  setDataCategories,
 } from '../store/data/actions'
 import store from '../store'
 import { keys } from '../assets'
@@ -71,6 +72,21 @@ const getAllMeditationsByTheme = async id => {
       store.dispatch(setDataCurrentThemeMeditations(RESPONSE))
       return true
     })
+    .catch(error => {
+      throw error
+    })
+  return RESPONSE
+}
+
+// Get all categories
+const getAllCategories = async () => {
+  const RESPONSE = []
+
+  await axios({
+    method,
+    url: `${domain}/categories`,
+  })
+    .then(res => store.dispatch(setDataCategories(res.data)))
     .catch(error => {
       throw error
     })
@@ -218,6 +234,7 @@ export {
   getAllMeditations,
   getMeditationById,
   getAllMeditationsByWing,
+  getAllCategories,
   getAllCategoriesByCategory,
   getAllThemes,
   getLogout,
