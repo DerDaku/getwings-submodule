@@ -8,7 +8,7 @@ import {
   SET_PLAYER_PALETTE,
 } from './types'
 
-import { helpers } from '../../assets'
+import { helpers } from '../../../assets'
 
 const setPlayerCurrent = payload => ({
   type: SET_PLAYER_CURRENT,
