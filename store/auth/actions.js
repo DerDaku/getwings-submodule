@@ -10,9 +10,9 @@ const authSignOut = payload => ({
   payload,
 })
 
-const authModalOpen = payload => ({
+const authModalState = payload => ({
   type: AUTH_MODAL_OPEN,
   payload,
 })
 
-export { authSignIn, authSignOut, authModalOpen }
+export { authSignIn, authSignOut, authModalState }
