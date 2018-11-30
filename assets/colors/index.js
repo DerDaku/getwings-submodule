@@ -32,3 +32,6 @@ export const border = '#eae0e6'
 
 // ui
 export const link = '#ec5c7e'
+
+// interactive
+export const error = '#f82626'
