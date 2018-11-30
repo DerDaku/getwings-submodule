@@ -24,6 +24,9 @@ export const grey3 = '#baa6b2'
 export const grey4 = '#968791'
 export const grey5 = '#2b2429'
 
+// background
+export const shade1 = '#eee'
+
 // border
 export const border = '#eae0e6'
 
