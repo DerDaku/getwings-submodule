@@ -4,7 +4,6 @@ import * as colors from '../colors'
 
 export default {
   font: {
-    // tags & sizes
     title: {
       ...helpers.heading({ _em: 3 }),
       margin: 0,
