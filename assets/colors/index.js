@@ -14,6 +14,9 @@ export const gradientCharlie = ['#E267FF', '#7934DF']
 export const gradientEcho = ['#FE9F6E', '#EC5C7E']
 export const gradientFoxtrot = ['#62cdff', '#4C64FF']
 
+// social
+export const facebook = '#4469b0'
+
 // font
 export const grey1 = '#30292e'
 export const grey2 = '#a1a19d'

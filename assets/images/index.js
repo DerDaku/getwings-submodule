@@ -3,6 +3,7 @@ export { default as LogoColored } from './logo/logoColored.svg'
 export { default as heroPurple } from './hero/purple.svg'
 export { default as downloadAndroid } from './download/android.svg'
 export { default as downloadApple } from './download/apple.svg'
+export { default as socialIconFacebook } from './social/icons/facebook/facebook.svg'
 
 export const wings = {
   Ariel: require('./wings/Ariel.png'),
