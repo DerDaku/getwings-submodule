@@ -174,7 +174,7 @@ const getLogout = async () => {
   let RESPONSE = []
   axios({
     method: 'delete',
-    url: `${domain}/auth/sign_out`,
+    url: `${domain}/auth/AUTH_SIGN_OUT`,
     headers: {
       Client: Cookie.set('client'),
       'Access-token': Cookie.set('access-token'),

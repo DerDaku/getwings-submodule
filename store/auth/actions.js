@@ -1,13 +1,18 @@
-import { SIGN_IN, SIGN_OUT } from './types'
+import { AUTH_SIGN_IN, AUTH_SIGN_OUT, AUTH_MODAL_OPEN } from './types'
 
 const authSignIn = payload => ({
-  type: SIGN_IN,
+  type: AUTH_SIGN_IN,
   payload,
 })
 
 const authSignOut = payload => ({
-  type: SIGN_OUT,
+  type: AUTH_SIGN_OUT,
   payload,
 })
 
-export { authSignIn, authSignOut }
+const authModalOpen = payload => ({
+  type: AUTH_MODAL_OPEN,
+  payload,
+})
+
+export { authSignIn, authSignOut, authModalOpen }

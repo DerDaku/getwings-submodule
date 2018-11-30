@@ -1,2 +1,3 @@
-export const SIGN_IN = 'SIGN_IN'
-export const SIGN_OUT = 'SIGN_OUT'
+export const AUTH_SIGN_IN = 'AUTH_SIGN_IN'
+export const AUTH_SIGN_OUT = 'AUTH_SIGN_OUT'
+export const AUTH_MODAL_OPEN = 'AUTH_MODAL_OPEN'
