@@ -35,3 +35,4 @@ export const link = '#ec5c7e'
 
 // interactive
 export const error = '#f82626'
+export const success = '#4caf50'

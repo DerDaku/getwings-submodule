@@ -227,6 +227,22 @@ const getWingById = async id => {
   return RESPONSE
 }
 
+// Send reset password link
+const getAuthResetPassword = async id => {
+  let RESPONSE = []
+  await axios({
+    method: 'post',
+    url: `${domain}/auth/password`,
+  })
+    .then(res => {
+      RESPONSE = res
+    })
+    .catch(error => {
+      throw error
+    })
+  return RESPONSE
+}
+
 export {
   setCookie,
   getAllMeditationsByTheme,
@@ -240,4 +256,5 @@ export {
   getLogout,
   getAllWings,
   getWingById,
+  getAuthResetPassword,
 }
