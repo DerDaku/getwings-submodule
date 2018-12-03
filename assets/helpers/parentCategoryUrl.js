@@ -1,10 +1,12 @@
+import keys from '../keys'
+
 const parentCategoryUrl = cat => {
   switch (cat) {
-    case 'https://staging.get-wings.de/categories/2':
+    case `${keys.domain}/categories/2`:
       return '/kurzmeditationen'
-    case 'https://staging.get-wings.de/categories/3':
+    case `${keys.domain}/categories/3`:
       return '/trancemeditationen'
-    case 'https://staging.get-wings.de/categories/4':
+    case `${keys.domain}/categories/4`:
       return '/kindermedtationen'
     default:
   }

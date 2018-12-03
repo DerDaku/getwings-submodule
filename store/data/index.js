@@ -1,5 +1,4 @@
 import {
-  SET_DATA_CURRENT_THEME_MEDITATIONS,
   SET_DATA_CURRENT_THEME,
   SET_DATA_THEMES,
   SET_DATA_ALL_WINGS,
@@ -22,13 +21,6 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case SET_DATA_CURRENT_THEME_MEDITATIONS:
-      return {
-        ...state,
-        currentThemeMeditations: {
-          ...action.payload,
-        },
-      }
     case SET_DATA_THEMES:
       return {
         ...state,

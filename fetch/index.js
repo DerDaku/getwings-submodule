@@ -3,7 +3,6 @@ import Cookie from 'js-cookie'
 import { authSignIn } from '../store/auth/actions'
 import { reduxSetCookie } from '../store/cookie/actions'
 import {
-  setDataCurrentThemeMeditations,
   setDataThemes,
   setDataAllWings,
   setDataCategories,
@@ -65,6 +64,7 @@ const getAllThemes = async () => {
 // Get all themes by category
 const getAllThemesByCategory = async id => {
   let RETURN = null
+
   await axios({
     method,
     url: `${domain}/categories/${id}/themes`,
@@ -89,7 +89,6 @@ const getAllMeditationsByTheme = async id => {
     .then(res => {
       RESPONSE = res.data
 
-      store.dispatch(setDataCurrentThemeMeditations(RESPONSE))
       return true
     })
     .catch(error => {
