@@ -5,6 +5,7 @@ import {
   SET_DATA_ALL_WINGS,
   SET_DATA_CURRENT_WING,
   SET_DATA_CATEGORIES,
+  SET_DATA_CURRENT_CATEGORIES,
 } from './types'
 
 const initialState = {
@@ -57,6 +58,13 @@ export default (state = initialState, action) => {
       return {
         ...state,
         categories: {
+          ...action.payload,
+        },
+      }
+    case SET_DATA_CURRENT_CATEGORIES:
+      return {
+        ...state,
+        currentCategory: {
           ...action.payload,
         },
       }

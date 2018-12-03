@@ -7,6 +7,7 @@ import {
   setDataThemes,
   setDataAllWings,
   setDataCategories,
+  setDataCurrentCategory,
 } from '../store/data/actions'
 import store from '../store'
 import { keys } from '../assets'
@@ -87,6 +88,21 @@ const getAllCategories = async () => {
     url: `${domain}/categories`,
   })
     .then(res => store.dispatch(setDataCategories(res.data)))
+    .catch(error => {
+      throw error
+    })
+  return RESPONSE
+}
+
+// Get category by ID
+const getCategoryById = async id => {
+  const RESPONSE = []
+
+  await axios({
+    method,
+    url: `${domain}/categories/${id}`,
+  })
+    .then(res => store.dispatch(setDataCurrentCategory(res.data)))
     .catch(error => {
       throw error
     })
@@ -257,4 +273,5 @@ export {
   getAllWings,
   getWingById,
   getAuthResetPassword,
+  getCategoryById,
 }
