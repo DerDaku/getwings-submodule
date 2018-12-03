@@ -1,6 +1,6 @@
 import * as colors from '../colors'
 
-const category = id => {
+const palette = id => {
   switch (id) {
     case 2:
       return {
@@ -13,21 +13,7 @@ const category = id => {
         color: colors.foxtrot,
       }
     case 4:
-      return {
-        gradient: colors.gradientCharlie,
-        color: colors.foxtrot,
-      }
-    case 5:
-      return {
-        gradient: colors.gradientFoxtrot,
-        color: colors.foxtrot,
-      }
-    case 6:
-      return {
-        gradient: colors.gradientBravo,
-        color: colors.bravo,
-      }
-    case 7:
+      // kindermedtationen
       return {
         gradient: colors.gradientCharlie,
         color: colors.charlie,
@@ -41,4 +27,4 @@ const category = id => {
   }
 }
 
-export default category
+export default palette

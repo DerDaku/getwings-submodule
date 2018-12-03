@@ -5,7 +5,8 @@ import {
   SET_DATA_ALL_WINGS,
   SET_DATA_CURRENT_WING,
   SET_DATA_CATEGORIES,
-  SET_DATA_CURRENT_CATEGORIES,
+  SET_DATA_CURRENT_CATEGORY,
+  SET_DATA_CURRENT_CATEGORY_THEMES,
 } from './types'
 
 const setDataCurrentThemeMeditations = payload => ({
@@ -39,7 +40,12 @@ const setDataCategories = payload => ({
 })
 
 const setDataCurrentCategory = payload => ({
-  type: SET_DATA_CURRENT_CATEGORIES,
+  type: SET_DATA_CURRENT_CATEGORY,
+  payload,
+})
+
+const setDataCurrentCategoryThemes = payload => ({
+  type: SET_DATA_CURRENT_CATEGORY_THEMES,
   payload,
 })
 
@@ -51,4 +57,5 @@ export {
   setDataCurrentWing,
   setDataCategories,
   setDataCurrentCategory,
+  setDataCurrentCategoryThemes,
 }

@@ -5,16 +5,19 @@ import {
   SET_DATA_ALL_WINGS,
   SET_DATA_CURRENT_WING,
   SET_DATA_CATEGORIES,
-  SET_DATA_CURRENT_CATEGORIES,
+  SET_DATA_CURRENT_CATEGORY,
+  SET_DATA_CURRENT_CATEGORY_THEMES,
 } from './types'
 
 const initialState = {
+  themes: {},
   currentTheme: {},
   currentThemeMeditations: {},
-  themes: {},
   wings: {},
   currentWing: {},
   categories: {},
+  currentCategory: {},
+  currentCategoryThemes: {},
 }
 
 export default (state = initialState, action) => {
@@ -61,10 +64,17 @@ export default (state = initialState, action) => {
           ...action.payload,
         },
       }
-    case SET_DATA_CURRENT_CATEGORIES:
+    case SET_DATA_CURRENT_CATEGORY:
       return {
         ...state,
         currentCategory: {
+          ...action.payload,
+        },
+      }
+    case SET_DATA_CURRENT_CATEGORY_THEMES:
+      return {
+        ...state,
+        currentCategoryThemes: {
           ...action.payload,
         },
       }

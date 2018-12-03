@@ -8,6 +8,7 @@ import {
   setDataAllWings,
   setDataCategories,
   setDataCurrentCategory,
+  setDataCurrentCategoryThemes,
 } from '../store/data/actions'
 import store from '../store'
 import { keys } from '../assets'
@@ -61,6 +62,23 @@ const getAllThemes = async () => {
   return RETURN
 }
 
+// Get all themes by category
+const getAllThemesByCategory = async id => {
+  let RETURN = null
+  await axios({
+    method,
+    url: `${domain}/categories/${id}/themes`,
+  })
+    .then(res => {
+      RETURN = res.data
+      store.dispatch(setDataCurrentCategoryThemes(res.data))
+    })
+    .catch(error => {
+      throw error
+    })
+  return RETURN
+}
+
 const getAllMeditationsByTheme = async id => {
   let RESPONSE = []
 
@@ -69,7 +87,8 @@ const getAllMeditationsByTheme = async id => {
     url: `${domain}/themes/${id}/meditations`,
   })
     .then(res => {
-      RESPONSE = res
+      RESPONSE = res.data
+
       store.dispatch(setDataCurrentThemeMeditations(RESPONSE))
       return true
     })
@@ -109,21 +128,7 @@ const getCategoryById = async id => {
   return RESPONSE
 }
 
-const getAllCategoriesByCategory = async id => {
-  const RESPONSE = []
-
-  await axios({
-    method,
-    url: `${domain}/categories/${id}/meditations`,
-  })
-    .then(res => store.dispatch(setDataCurrentThemeMeditations(res)))
-    .catch(error => {
-      throw error
-    })
-  return RESPONSE
-}
-
-// Get all themes by category
+// Get meditation by ID
 const getMeditationsById = async id => {
   const RESPONSE = []
   await axios({
@@ -135,9 +140,19 @@ const getMeditationsById = async id => {
   return RESPONSE
 }
 
-// ADD HEADER UI ID ACCESS TOKEN ETC
+// Get all meditations by category
+const getAllMeditationsByCategory = async id => {
+  const RESPONSE = []
+  await axios({
+    method,
+    url: `${domain}/categories/${id}/meditations`,
+  }).catch(error => {
+    throw error
+  })
+  return RESPONSE
+}
 
-// Get all themes by category
+// Get meditation by ID
 const getMeditationById = async id => {
   let RESPONSE = []
   await axios({
@@ -260,15 +275,16 @@ const getAuthResetPassword = async id => {
 }
 
 export {
+  getAllThemes,
+  getAllThemesByCategory,
   setCookie,
   getAllMeditationsByTheme,
   getMeditationsById,
+  getAllMeditationsByCategory,
   getAllMeditations,
   getMeditationById,
   getAllMeditationsByWing,
   getAllCategories,
-  getAllCategoriesByCategory,
-  getAllThemes,
   getLogout,
   getAllWings,
   getWingById,
